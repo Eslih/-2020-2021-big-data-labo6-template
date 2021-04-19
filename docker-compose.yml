@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  youtube-processor:
+    build: ./
+    volumes:
+      - ./exportVideos.json:/data/exportVideos.json
+      - ./aws-credentials.txt:/root/.aws/credentials
+      - ./aws-config.txt:/root/.aws/config
+      - ./youtube.py:/root/youtube.py
+    entrypoint: [ "sh", "-c", "sleep 2073600" ]
+    command: python /root/youtube.py
