@@ -1,4 +1,4 @@
-FROM python:3.11.3-alpine3.17
+FROM python:3.12.3-alpine3.19
 
 COPY ./requirements.txt ./
 
