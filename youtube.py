@@ -3,7 +3,7 @@ import time
 import boto3
 
 client = boto3.client('firehose')
-deliveryStream = 'jouw-naam'
+deliveryStream = 'your-name'
 
 with open('/data/exportVideos.json') as file:
     line = file.readline()
